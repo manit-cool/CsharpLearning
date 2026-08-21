@@ -1,0 +1,14 @@
+/home/manit/Desktop/csharplearn/bin/Debug/net10.0/csharplearn
+/home/manit/Desktop/csharplearn/bin/Debug/net10.0/csharplearn.deps.json
+/home/manit/Desktop/csharplearn/bin/Debug/net10.0/csharplearn.runtimeconfig.json
+/home/manit/Desktop/csharplearn/bin/Debug/net10.0/csharplearn.dll
+/home/manit/Desktop/csharplearn/bin/Debug/net10.0/csharplearn.pdb
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.GeneratedMSBuildEditorConfig.editorconfig
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.AssemblyInfoInputs.cache
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.AssemblyInfo.cs
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.csproj.CoreCompileInputs.cache
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.dll
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/refint/csharplearn.dll
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.pdb
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.genruntimeconfig.cache
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/ref/csharplearn.dll
