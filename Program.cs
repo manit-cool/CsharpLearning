@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 Console.WriteLine("Hello, World!"); // This prints out things to the terminal
 //Strings!
 string firstFriend = "Prokhor";
@@ -25,3 +26,26 @@ Console.WriteLine(fruits.Length);
 Console.WriteLine(fruits.ToUpper());
 Console.WriteLine(fruits.StartsWith("My"));
 //Just a few more functions that are available with strings :D
+
+//Ints and Floats
+int a = 18;
+int b = 9;
+int c = a + b;
+Console.WriteLine(c);
+
+//okay that's easy, but what about bigger numbers :0
+// ints usually cap out between 2.1 billion and 2.2 billion!
+// Now what would happen here:
+int t = 2100000000;
+int u = 2100000000;
+//int h = t + u;
+//Console.WriteLine(h);
+
+//okay so h overflows the max value, so essentially converting it to a long would work right?
+//long h = t + u;
+//Console.WriteLine(h);
+//But there's another issue, the addition is happening in an integer format, just how in python you can't just add an int to a string without CASTING!
+// so we hard cast the values
+long h = (long)t + (long)u;
+Console.WriteLine(h);
+//yippeee!! This is manit-cool2324 signing off for the night ;)

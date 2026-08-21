@@ -12,3 +12,4 @@
 /home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.pdb
 /home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.genruntimeconfig.cache
 /home/manit/Desktop/csharplearn/obj/Debug/net10.0/ref/csharplearn.dll
+/home/manit/Desktop/csharplearn/obj/Debug/net10.0/csharplearn.sourcelink.json
