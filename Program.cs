@@ -102,13 +102,13 @@ do
 // Do-While loops would run 1 time if false
 
 // For loops!
-
+Console.WriteLine("BREAK");
 for (int i = 1; i < 5; i++) //this is like javascript or java --> one of those, or none of those :D
 {
     Console.WriteLine(i);
 }
 // you can also do nested for loops!
-
+Console.WriteLine("BREAK");
 for (int Row = 1; Row < 11; Row++)
 {
     for (char column = 'a'; column < 'k'; column++) //notice this? Pretty cool right? You can just add to a char and it'll go to the next letter! :D
@@ -118,9 +118,78 @@ for (int Row = 1; Row < 11; Row++)
 }
 
 //Let's try to give letter it's own row ;)
+Console.WriteLine("BREAK");
 int row = 1;
 for (char letter = 'a'; letter < 'k'; letter++)
 {
     Console.WriteLine($"The row is {row} and the letter is {letter}");
     row++;
+}
+// That's loops!
+// Lists
+// We can use this to manage our data!
+// We'll specifically be using List<T>
+Console.WriteLine("BREAK");
+var stringOfNames = new List<string> { "Scott", "David", "Damian" };
+List<string> StringOfNames = new List<string> {"Scott", "Appley"};
+Console.WriteLine(string.Join(' ', StringOfNames)); // I had to use join, because lists can't be outputted like a string:) --> i mean that's what i understood from the
+Console.WriteLine(string.Join(' ', stringOfNames)); // terminal :D
+
+//ALSO: you add items to lists via
+stringOfNames.Add("hehe");
+
+//Now what if we want to print out the values of the list?
+// Number 1; The boring way
+Console.WriteLine("BREAK");
+for (int index = 0; index < stringOfNames.Count; index++)
+{
+    Console.WriteLine(stringOfNames[index]);
+}
+// Number 2: ooo I like your style!
+Console.WriteLine("BREAK");
+foreach (var name in StringOfNames)
+{
+    Console.WriteLine(name);
+}
+
+// BTW sorry the prints are so messy, I just don't like commenting my code out :D
+// More things about Lists
+//list values can be accessed via ranges
+Console.WriteLine("BREAK");
+
+foreach (var name in stringOfNames[1..3])
+{
+    Console.WriteLine(name);
+}
+Console.WriteLine("BREAK");
+// list values can be accessed from the back!
+// just like in python, you access list values from the back via negative numbres
+// but in c# you use ^ :D
+Console.WriteLine(stringOfNames[^1]);
+//also note, that the first value when accessing via backwards is 1 and not 0 :D
+// Now we also have arrays!
+
+var names = new string[] { "e", "h", "m" };
+//Something about arrays, are that they are fixed in length! SO you can't add anything to them
+// but if you really wanted to add something to them, you can essentially make a new array but store it in the same variable
+
+names = [..names, "g"];
+
+foreach (var name in names)
+{
+    Console.WriteLine(name);
+}
+
+Console.WriteLine("BREAK");
+//sorting!
+
+var numbers = new List<int> {99,34,19,62,53,74};
+
+Console.WriteLine(numbers.IndexOf(99));//this would return 0
+numbers.Sort();//this does't return anything, and it just changes the value of the list to become sorted :D
+Console.WriteLine(numbers.IndexOf(99));//this would return 5
+
+foreach (var number in numbers)
+{
+    Console.WriteLine($"{number}");
 }
