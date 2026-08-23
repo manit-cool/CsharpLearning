@@ -1,4 +1,13 @@
 # Welcome!
-Well, you've stumbled upon my little project here! The goal for this entire repo was just to write down everything I've learnt from the Beginner
-to C# course from Microsoft! As you can see in Program.cs.
-Hope you enjoy reading my file loaded with horrible spelling and probably genuine stupidity! :D
+Well, you've stumbled upon my little project here!
+In this project, I did the C# for Beginners course that Microsoft provides.
+
+## Contents
+Strings
+Numbers, integers, casting, and precision
+Conditionals
+Loops
+List<t> and arrays + Foreach loop
+LinQ usage and the difference between Query and LinQ Method syntax!
+
+Hope you enjoy this!
