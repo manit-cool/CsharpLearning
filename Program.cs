@@ -193,3 +193,47 @@ foreach (var number in numbers)
 {
     Console.WriteLine($"{number}");
 }
+
+//Linq(Language Integrated Query) time :D and IEnumerables
+// Enumerators
+
+var Scores = new List<int> { 56, 65, 68, 81, 95, 96, 93 };
+for (int i = 0; i < Scores.Count; i++)
+{
+    if (Scores[i] > 80)
+    {
+        Console.WriteLine($"Number is: {Scores[i]}");
+    }
+}
+
+// OR we can use something else, called an Enumerator :D
+
+IEnumerable<int> highScores = // query syntax
+    from score in Scores
+    where score > 80
+    orderby score descending
+    select score; // you can also change this into outputting a string, as shown :D well not anymore-
+
+// this just represents all the "breadcrumbs" in the piece of bread (list)
+// where the breadcrumbs are everything that is above 80, there is no evaluvation here, it just REPRESENTS it
+
+List<int> scores = highScores.ToList(); // now all the values are compiled into this list :D
+
+
+foreach (int i in highScores)
+{
+    Console.WriteLine(i);
+}
+
+//Method syntax vs Query Syntax
+// Method syntax! (query syntax was above :D)
+
+IEnumerable<int> Highscores = scores.Where(s => s > 80).OrderByDescending(s => s); // cool right?
+// personally i like the querry one, but if I wanted to show off my skills I'd prolly do this one ;D
+
+foreach (int i in Highscores)
+{
+    Console.WriteLine(i);
+}
+//That was Linq! No not the Zelda guy, Language-Integrated Queries, incase you forgot T_T
+//Time for the big guns, OOPS wait oops, not OOPS- OOP :D
