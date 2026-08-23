@@ -1,4 +1,7 @@
 ﻿using System;
+using People;
+using Earth;
+using System.Net;
 using System.Runtime.CompilerServices;
 Console.WriteLine("Hello, World!"); // This prints out things to the terminal
 //Strings!
@@ -237,3 +240,110 @@ foreach (int i in Highscores)
 }
 //That was Linq! No not the Zelda guy, Language-Integrated Queries, incase you forgot T_T
 //Time for the big guns, OOPS wait oops, not OOPS- OOP :D
+
+Human.Main(); // Namespaces are usually at the bottom of the files ;) Or before the using --> but you'd have to fact check that :D
+// you have to check the bottom for the namespace:D because i can't keep it here :<
+
+//Classes time
+
+// Alright, now that we have 3 differnt classes each with different ways of writing the same code, let's test!
+
+var person1 = new Person(){firstName = "scott", lastName = "Damian", birthday = new DateOnly(1980,1,1)};
+Console.WriteLine(person1.firstName); // cool right? just like python :D
+var person2 = new Person2("scott", "Damian", new DateOnly(1980, 1, 1)); // Same format for both
+var person3 = new Person2("scott", "Damian", new DateOnly(1980, 1, 1));
+// Honestly, I really like Person2 the most! I would NOT reccomend Person because unless you want your values to change, it's not good
+List<Person2> people = [person2, person3];
+
+
+//We've reached the final stage guys, THE FINALE!! --> get a load of that guy </3, wait that's me ... well um this is awkward
+// let's just continue T_T
+
+//Parents classes <*> --> imagine that as a really cool looking sparkly star ;)
+
+person3.Pets.Add(new Cat("Frinko Pods")); // ALWAYS REMEMBER NEW, if you're using a datatype
+// as without it, the compiler thinks you're using a method --> could someone fact check me on that? I may be wrong :D
+
+foreach(var person in people)
+{
+    Console.WriteLine(person);
+    foreach(var pet in person.Pets)
+    {
+        Console.WriteLine($" {pet}");
+    }
+}
+
+public abstract class Pet(string firstName) // abstract is just a fancy way of saying that I want this to be like a blueprint
+{
+    public string Name { get; } = firstName;
+    public abstract string Noise();
+    public override string ToString()
+    {
+        return $"{firstName} and I am a {GetType().Name}";
+    }
+}
+
+class Cat(string firstName) : Pet(firstName)
+{
+    public override string Noise() => "meow"; // => just shows return instead of writing
+    //public override string Noise() {return "meow";}
+
+}
+
+//Namespaces
+namespace People
+{
+    //Way 1 --> You can change the persons identity ;-;
+    class Person
+    {
+        public string firstName;
+        public string lastName;
+        public DateOnly birthday;
+    }
+    /*
+    Person p = new Person();
+
+    p.firstName = "Apple";
+    p.lastName = "Bnana";
+    p.birthday = new DateOnly(1973, 5, 10);
+    */
+    //Way 2
+    class Person1
+    {
+        public Person1(string first, string last, DateOnly bd)
+        {
+            firstName = first;
+            lastName = last;
+            birthday = bd;
+        }
+        private string firstName;
+        private string lastName;
+        private DateOnly birthday;
+    } //The problem with this is that you can output the values of firstName or lastName outside the class/namespace :(
+    // like
+    // Console.WriteLine(person.firstName); --> This bugs out:/
+    class Person2(string fn, string ln, DateOnly bd)
+    {
+        public string First { get; } = fn;
+        public string Last { get; } = ln;
+        public DateOnly Birthday { get; } = bd;
+        public List<Pet> Pets { get; } = new();
+        public override string ToString() // Essentially just overrides the generic value of printing out the datatype to
+        // whatever we want when we print out the values of the class ;)
+        {
+            return $"{fn}, {ln}";
+        }
+    } // Now this perfection, you can access all the values WITHOUT them being able to be reSet, BUT
+    // if you ever needed to you can just define the variable like this
+    // public string Set2 {get; set;} = fmRadio; --> Tada! now it can be reSet else where ;)
+}
+namespace Earth // To run this, you'd have to do "using Earth;" --> just scroll up all the way to see :D
+{
+    public class Human
+    {
+        public static void Main()
+        {
+            Console.WriteLine("Hello World! Howdy do?");
+        }
+    }
+}
